@@ -336,6 +336,7 @@ body.dark-mode .card:focus-within {
   border: 2px solid var(--text-color);
   transition: all 0.4s ease;
   box-shadow: 0 4px 12px var(--shadow-medium);
+  display: block;
 }
 
 .card:hover img {
@@ -639,7 +640,10 @@ body.dark-mode .social-icon:hover {
   }
 
   .card img {
-    height: 160px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: color-mix(in srgb, var(--card-bg) 70%, transparent);
   }
 
   .links {
