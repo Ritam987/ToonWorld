@@ -130,6 +130,15 @@ export function initReviews() {
       return;
     }
 
+    // Send to server as well (DB will be added later).
+    fetch("/api/reviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, rating, comment }),
+    }).catch(() => {
+      // Keep UI/localStorage flow working even if server is down.
+    });
+
     reviews.push({ name, rating, comment });
     if (reviews.length > MAX_REVIEWS) {
       reviews = reviews.slice(-MAX_REVIEWS);

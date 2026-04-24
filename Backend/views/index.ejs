@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ToonWorld is a student-built cartoon animation project showcasing various cartoon resources with a clean and attractive web design.">
+
+  <title>ToonWorld - Discover Your Favourite Cartoon</title>
+
+  <meta property="og:title" content="ToonWorld - Discover Your Favourite Cartoon">
+  <meta property="og:description" content="ToonWorld is a student-built cartoon animation project showcasing various cartoon resources with a clean and attractive web design.">
+  <meta property="og:image" content="https://ritam987.github.io/TW-ToonWorld/images/toonworld-icon.avif">
+  <meta property="og:url" content="https://ritam987.github.io/TW-ToonWorld/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ToonWorld">
+
+  <link rel="icon" href="images/toonworld-icon.avif">
+  <link rel="stylesheet" href="Frontend/style.css">
+  <link rel="stylesheet" href="Frontend/preloader.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap'>
+</head>
+
+<body>
+
+  <!-- Preloader Overlay -->
+  <div id="preloader-overlay">
+    <button class="order"><span class="default">Complete Order</span><span class="success">Order Placed
+      <svg viewbox="0 0 12 10">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg></span>
+      <div class="box"></div>
+      <div class="truck">
+        <div class="back"></div>
+        <div class="front">
+          <div class="window"></div>
+        </div>
+        <div class="light top"></div>
+        <div class="light bottom"></div>
+      </div>
+      <div class="lines"></div>
+    </button>
+  </div>
+
+  <%- include("partials/header") %>
+
+  <!-- Card Container -->
+  <main class="card-container" aria-label="Cartoon cards">
+    <!-- Cards are rendered dynamically via Frontend/main.js -->
+  </main>
+
+  <%- include("partials/footer") %>
+
+  <!-- Scroll to Top/Bottom Button -->
+  <button id="scroll-btn" class="social-icon" aria-label="Scroll to bottom">
+    <!-- Down Arrow Icon (Default) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+    </svg>
+  </button>
+
+  <script type="module" src="Frontend/main.js"></script>
+</body>
+</html>
+
