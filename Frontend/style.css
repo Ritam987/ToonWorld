@@ -288,12 +288,25 @@ header input::placeholder {
   opacity: 1;
 }
 
+.card:focus-within::before {
+  opacity: 1;
+}
+
 .card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 35px var(--shadow-heavy);
 }
 
+.card:focus-within {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 35px var(--shadow-heavy);
+}
+
 body.dark-mode .card:hover {
+  box-shadow: 0 12px 35px var(--shadow-heavy), 0 0 30px var(--glow-white);
+}
+
+body.dark-mode .card:focus-within {
   box-shadow: 0 12px 35px var(--shadow-heavy), 0 0 30px var(--glow-white);
 }
 
@@ -330,7 +343,16 @@ body.dark-mode .card:hover {
   box-shadow: 0 8px 20px var(--shadow-heavy);
 }
 
+.card:focus-within img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px var(--shadow-heavy);
+}
+
 body.dark-mode .card:hover img {
+  box-shadow: 0 8px 20px var(--shadow-heavy), 0 0 20px var(--glow-white);
+}
+
+body.dark-mode .card:focus-within img {
   box-shadow: 0 8px 20px var(--shadow-heavy), 0 0 20px var(--glow-white);
 }
 
@@ -346,6 +368,11 @@ body.dark-mode .card:hover img {
   text-shadow: 0 2px 8px var(--shadow-medium);
 }
 
+.card:focus-within h3 {
+  transform: scale(1.05);
+  text-shadow: 0 2px 8px var(--shadow-medium);
+}
+
 .card p {
   font-size: 14px;
   line-height: 1.5;
@@ -356,6 +383,10 @@ body.dark-mode .card:hover img {
 }
 
 .card:hover p {
+  opacity: 1;
+}
+
+.card:focus-within p {
   opacity: 1;
 }
 
